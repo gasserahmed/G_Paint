@@ -1,0 +1,60 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.gpaint.MainActivity" >
+    <group android:id="@+id/group1">
+    <item android:id="@+id/item_clrScreen" android:title="Clear Screen"></item>
+    <item android:id="@+id/item_tool" android:title="@string/tool">
+        <menu>
+            <group android:id="@+id/group5">
+                <item android:id="@+id/item_free" android:title="@string/free" /><item android:id="@+id/item_rect" android:title="@string/rect_tool"/>
+                <item android:id="@+id/item_circle" android:title="@string/circle_tool"/>
+                <item android:id="@+id/item_oval" android:title="@string/oval_tool"/>
+                <item android:id="@+id/item_arc" android:title="@string/arc_tool"/>
+                
+            </group>
+        </menu>
+    </item><item android:id="@+id/item_color" android:title="Select Color">
+        <menu>
+            <group    android:id="@+id/group2">
+                <item android:id="@+id/item_white" android:title="@string/White_color"/>
+                <item android:id="@+id/item_blk" android:title="@string/Black_color"/>
+                <item android:id="@+id/item_blue" android:title="@string/Blue_color"/>
+                <item android:id="@+id/item_red" android:title="@string/Red_color"/>
+                <item android:id="@+id/item_yellow" android:title="@string/Yellow_color"/>
+                <item android:id="@+id/item_green" android:title="@string/Green_color"/>
+                <item android:id="@+id/item_purple" android:title="@string/Purple_color"/>
+                
+            </group>
+            
+        </menu>
+    </item>
+    <item android:id="@+id/item_bg" android:title="Select Background Color">
+        <menu>
+            <group    android:id="@+id/group3">
+                <item android:id="@+id/item_wh_bg" android:title="@string/White_color"/>
+                <item android:id="@+id/item_black_bg" android:title="@string/Black_color"/>
+                <item android:id="@+id/item_blue_bg" android:title="@string/Blue_color"/>
+                <item android:id="@+id/item_red_bg" android:title="@string/Red_color"/>
+                <item android:id="@+id/item_yellow_bg" android:title="@string/Yellow_color"/>
+                <item android:id="@+id/item_green_bg" android:title="@string/Green_color"/>
+                <item android:id="@+id/item_purple_bg" android:title="@string/Purple_color"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/item_thickness" android:title="Select Thickness">
+        <menu>
+            <group android:id="@+id/group4">
+                <item android:id="@+id/item_thickness_1" android:title="1" /><item android:id="@+id/item_thickness_5" android:title="5"/>
+                <item android:id="@+id/item_thickness_10" android:title="10"/>
+                <item android:id="@+id/item_thickness_15" android:title="15"/>
+                
+                <item android:id="@+id/item_thickness_20" android:title="20"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/item_saveImage" android:title="@string/save_image"></item>
+    <item android:id="@+id/item_loadImage" android:title="@string/load_image"></item>
+    
+    </group>
+</menu>

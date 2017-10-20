@@ -1,0 +1,67 @@
+package com.example.gpaint;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+
+
+
+public class MyCanvas extends View implements OnTouchListener {
+	Paint paint;
+	Bitmap myBitmap;
+    int strokeWidth;
+	int strokeColor;
+	int fillColor;
+    MyCanvas drawingView;
+    private Tool currentTool;
+
+	public MyCanvas(Context context){
+		super(context);
+		setFocusable(true);
+		setFocusableInTouchMode(true);
+		this.setBackgroundColor(Color.BLUE);
+		this.setOnTouchListener(this);
+		paint = new Paint();
+		paint.setColor(Color.WHITE);
+		paint.setAntiAlias(true);
+		paint.setStrokeWidth(10);
+	}
+	
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.display_message, menu);
+		return true;
+	}
+	@Override
+	protected void onDraw(Canvas canvas){
+		if(myBitmap==null)
+		{
+			myBitmap=Bitmap.createBitmap(getWidth(),getHeight(),Config.ARGB_8888);
+		}
+		canvas.drawBitmap(myBitmap, 0,0, paint);
+	}
+	float prevX=-1,prevY=-1;
+	@Override
+	public boolean onTouch(View view,MotionEvent event){
+		Canvas c=new Canvas(myBitmap);
+		if(prevX>-1){
+			c.drawLine(prevX, prevY, event.getX(), event.getY(), paint);
+		}
+		prevX=event.getX();
+		prevY=event.getY();
+		if (event.getAction()==MotionEvent.ACTION_UP){
+			prevX=-1;
+		}
+		invalidate();
+		return true;
+	}
+	
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">G\'Paint</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_canvas">MyCanvas</string>
+    <string name="title_activity_drawing_view">DrawingView</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="Blue_color">Blue</string>
+    <string name="Black_color">Black</string>
+    <string name="White_color">White</string>
+    <string name="Red_color">Red</string>
+    <string name="Green_color">Green</string>
+    <string name="Yellow_color">Yellow</string>
+    <string name="save_image">Save Image</string>
+    <string name="tool">Select Tool</string>
+    <string name="rect_tool">Rectangle</string>
+    <string name="circle_tool">Circle</string>
+    <string name="arc_tool">Arc</string>
+    <string name="oval_tool">Oval</string>
+    <string name="free">Free Paint Mode</string>
+    <string name="load">Load</string>
+    <string name="save">Save</string>
+    <string name="image_name">Image Name</string>
+    <string name="title_activity_load">Load Image</string>
+    <string name="title_activity_save">Save Image</string>
+    <string name="load_image">Load Image</string>
+    <string name="title_activity_hi">Hi</string>
+    <string name="Purple_color">Purple</string>
+    <string name="showtoolbar">Show Toolbar</string>
+    <string name="enter_image_name">Enter Image Name :</string>
+    <string name="cancel">Cancel</string>
+
+</resources>
